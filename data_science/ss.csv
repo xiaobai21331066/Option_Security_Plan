@@ -1,0 +1,337 @@
+ss|1
+Series([data, index, dtype, name, copy, …])|One-dimensional ndarray with axis labels (including time series).
+index|The index (axis labels) of the Series.
+array|The ExtensionArray of the data backing this Series or Index.
+values|Return Series as ndarray or ndarray-like depending on the dtype.
+dtype|Return the dtype object of the underlying data.
+ftype|"Return if the data is sparse|dense."
+shape|Return a tuple of the shape of the underlying data.
+nbytes|Return the number of bytes in the underlying data.
+ndim|Number of dimensions of the underlying data, by definition 1.
+size|Return the number of elements in the underlying data.
+strides|Return the strides of the underlying data.
+itemsize|Return the size of the dtype of the item of the underlying data.
+base|Return the base object if the memory of the underlying data is shared.
+T|Return the transpose, which is by definition self.
+memory_usage([index, deep])|Return the memory usage of the Series.
+hasnans|Return if I have any nans; enables various perf speedups.
+flags|
+empty|
+dtypes|Return the dtype object of the underlying data.
+ftypes|"Return if the data is sparse|dense."
+data|Return the data pointer of the underlying data.
+is_copy|Return the copy.
+name|Return name of the Series.
+put(*args, **kwargs)|Applies the put method to its values attribute if it has one.
+astype(dtype[, copy, errors])|Cast a pandas object to a specified dtype dtype.
+infer_objects()|Attempt to infer better dtypes for object columns.
+convert_objects([convert_dates, …])|(DEPRECATED) Attempt to infer better dtype for object columns.
+copy([deep])|Make a copy of this object’s indices and data.
+bool()|Return the bool of a single element PandasObject.
+to_numpy([dtype, copy])|A NumPy ndarray representing the values in this Series or Index.
+to_period([freq, copy])|Convert Series from DatetimeIndex to PeriodIndex with desired frequency (inferred from index if not passed).
+to_timestamp([freq, how, copy])|Cast to datetimeindex of timestamps, at beginning of period.
+to_list()|Return a list of the values.
+get_values()|Same as values (but handles sparseness conversions); is a view.
+__array__([dtype])|Return the values as a NumPy array.
+get(key[, default])|Get item from object for given key (DataFrame column, Panel slice, etc.).
+at|Access a single value for a row/column label pair.
+iat|Access a single value for a row/column pair by integer position.
+loc|Access a group of rows and columns by label(s) or a boolean array.
+iloc|Purely integer-location based indexing for selection by position.
+__iter__()|Return an iterator of the values.
+iteritems()|Lazily iterate over (index, value) tuples.
+items()|Lazily iterate over (index, value) tuples.
+keys()|Alias for index.
+pop(item)|Return item and drop from frame.
+item()|Return the first element of the underlying data as a python scalar.
+xs(key[, axis, level, drop_level])|Return cross-section from the Series/DataFrame.
+add(other[, level, fill_value, axis])|Addition of series and other, element-wise (binary operator add).
+sub(other[, level, fill_value, axis])|Subtraction of series and other, element-wise (binary operator sub).
+mul(other[, level, fill_value, axis])|Multiplication of series and other, element-wise (binary operator mul).
+div(other[, level, fill_value, axis])|Floating division of series and other, element-wise (binary operator truediv).
+truediv(other[, level, fill_value, axis])|Floating division of series and other, element-wise (binary operator truediv).
+floordiv(other[, level, fill_value, axis])|Integer division of series and other, element-wise (binary operator floordiv).
+mod(other[, level, fill_value, axis])|Modulo of series and other, element-wise (binary operator mod).
+pow(other[, level, fill_value, axis])|Exponential power of series and other, element-wise (binary operator pow).
+radd(other[, level, fill_value, axis])|Addition of series and other, element-wise (binary operator radd).
+rsub(other[, level, fill_value, axis])|Subtraction of series and other, element-wise (binary operator rsub).
+rmul(other[, level, fill_value, axis])|Multiplication of series and other, element-wise (binary operator rmul).
+rdiv(other[, level, fill_value, axis])|Floating division of series and other, element-wise (binary operator rtruediv).
+rtruediv(other[, level, fill_value, axis])|Floating division of series and other, element-wise (binary operator rtruediv).
+rfloordiv(other[, level, fill_value, …])|Integer division of series and other, element-wise (binary operator rfloordiv).
+rmod(other[, level, fill_value, axis])|Modulo of series and other, element-wise (binary operator rmod).
+rpow(other[, level, fill_value, axis])|Exponential power of series and other, element-wise (binary operator rpow).
+combine(other, func[, fill_value])|Combine the Series with a Series or scalar according to func.
+combine_first(other)|Combine Series values, choosing the calling Series’s values first.
+round([decimals])|Round each value in a Series to the given number of decimals.
+lt(other[, level, fill_value, axis])|Less than of series and other, element-wise (binary operator lt).
+gt(other[, level, fill_value, axis])|Greater than of series and other, element-wise (binary operator gt).
+le(other[, level, fill_value, axis])|Less than or equal to of series and other, element-wise (binary operator le).
+ge(other[, level, fill_value, axis])|Greater than or equal to of series and other, element-wise (binary operator ge).
+ne(other[, level, fill_value, axis])|Not equal to of series and other, element-wise (binary operator ne).
+eq(other[, level, fill_value, axis])|Equal to of series and other, element-wise (binary operator eq).
+product([axis, skipna, level, …])|Return the product of the values for the requested axis.
+dot(other)|Compute the dot product between the Series and the columns of other.
+apply(func[, convert_dtype, args])|Invoke function on values of Series.
+agg(func[, axis])|Aggregate using one or more operations over the specified axis.
+aggregate(func[, axis])|Aggregate using one or more operations over the specified axis.
+transform(func[, axis])|Call func on self producing a Series with transformed values and that has the same axis length as self.
+map(arg[, na_action])|Map values of Series according to input correspondence.
+groupby([by, axis, level, as_index, …])|Group DataFrame or Series using a mapper or by a Series of columns.
+rolling(window[, min_periods, …])|Provides rolling window calculations.
+expanding([min_periods, center, axis])|Provides expanding transformations.
+ewm([com, span, halflife, alpha, …])|Provides exponential weighted functions.
+pipe(func, *args, **kwargs)|Apply func(self, *args, **kwargs).
+abs()|Return a Series/DataFrame with absolute numeric value of each element.
+all([axis, bool_only, skipna, level])|Return whether all elements are True, potentially over an axis.
+any([axis, bool_only, skipna, level])|Return whether any element is True, potentially over an axis.
+autocorr([lag])|Compute the lag-N autocorrelation.
+between(left, right[, inclusive])|Return boolean Series equivalent to left <= series <= right.
+clip([lower, upper, axis, inplace])|Trim values at input threshold(s).
+clip_lower(threshold[, axis, inplace])|(DEPRECATED) Trim values below a given threshold.
+clip_upper(threshold[, axis, inplace])|(DEPRECATED) Trim values above a given threshold.
+corr(other[, method, min_periods])|Compute correlation with other Series, excluding missing values.
+count([level])|Return number of non-NA/null observations in the Series.
+cov(other[, min_periods])|Compute covariance with Series, excluding missing values.
+cummax([axis, skipna])|Return cumulative maximum over a DataFrame or Series axis.
+cummin([axis, skipna])|Return cumulative minimum over a DataFrame or Series axis.
+cumprod([axis, skipna])|Return cumulative product over a DataFrame or Series axis.
+cumsum([axis, skipna])|Return cumulative sum over a DataFrame or Series axis.
+describe([percentiles, include, exclude])|Generate descriptive statistics that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding NaN values.
+diff([periods])|First discrete difference of element.
+factorize([sort, na_sentinel])|Encode the object as an enumerated type or categorical variable.
+kurt([axis, skipna, level, numeric_only])|Return unbiased kurtosis over requested axis using Fisher’s definition of kurtosis (kurtosis of normal == 0.0).
+mad([axis, skipna, level])|Return the mean absolute deviation of the values for the requested axis.
+max([axis, skipna, level, numeric_only])|Return the maximum of the values for the requested axis.
+mean([axis, skipna, level, numeric_only])|Return the mean of the values for the requested axis.
+median([axis, skipna, level, …])|Return the median of the values for the requested axis.
+min([axis, skipna, level, numeric_only])|Return the minimum of the values for the requested axis.
+mode([dropna])|Return the mode(s) of the dataset.
+nlargest([n, keep])|Return the largest n elements.
+nsmallest([n, keep])|Return the smallest n elements.
+pct_change([periods, fill_method, …])|Percentage change between the current and a prior element.
+prod([axis, skipna, level, …])|Return the product of the values for the requested axis.
+quantile([q, interpolation])|Return value at the given quantile.
+rank([axis, method, numeric_only, …])|Compute numerical data ranks (1 through n) along axis.
+sem([axis, skipna, level, ddof, …])|Return unbiased standard error of the mean over requested axis.
+skew([axis, skipna, level, numeric_only])|Return unbiased skew over requested axis Normalized by N-1.
+std([axis, skipna, level, ddof, …])|Return sample standard deviation over requested axis.
+sum([axis, skipna, level, …])|Return the sum of the values for the requested axis.
+var([axis, skipna, level, ddof, …])|Return unbiased variance over requested axis.
+kurtosis([axis, skipna, level, …])|Return unbiased kurtosis over requested axis using Fisher’s definition of kurtosis (kurtosis of normal == 0.0).
+unique()|Return unique values of Series object.
+nunique([dropna])|Return number of unique elements in the object.
+is_unique|Return boolean if values in the object are unique.
+is_monotonic|Return boolean if values in the object are monotonic_increasing.
+is_monotonic_increasing|Return boolean if values in the object are monotonic_increasing.
+is_monotonic_decreasing|Return boolean if values in the object are monotonic_decreasing.
+value_counts([normalize, sort, …])|Return a Series containing counts of unique values.
+compound([axis, skipna, level])|Return the compound percentage of the values for the requested axis.
+align(other[, join, axis, level, …])|Align two objects on their axes with the specified join method for each axis Index.
+drop([labels, axis, index, columns, …])|Return Series with specified index labels removed.
+droplevel(level[, axis])|Return DataFrame with requested index / column level(s) removed.
+drop_duplicates([keep, inplace])|Return Series with duplicate values removed.
+duplicated([keep])|Indicate duplicate Series values.
+equals(other)|Test whether two objects contain the same elements.
+first(offset)|Convenience method for subsetting initial periods of time series data based on a date offset.
+head([n])|Return the first n rows.
+idxmax([axis, skipna])|Return the row label of the maximum value.
+idxmin([axis, skipna])|Return the row label of the minimum value.
+isin(values)|Check whether values are contained in Series.
+last(offset)|Convenience method for subsetting final periods of time series data based on a date offset.
+reindex([index])|Conform Series to new index with optional filling logic, placing NA/NaN in locations having no value in the previous index.
+reindex_like(other[, method, copy, …])|Return an object with matching indices as other object.
+rename([index])|Alter Series index labels or name.
+rename_axis([mapper, index, columns, …])|Set the name of the axis for the index or columns.
+reset_index([level, drop, name, inplace])|Generate a new DataFrame or Series with the index reset.
+sample([n, frac, replace, weights, …])|Return a random sample of items from an axis of object.
+select(crit[, axis])|(DEPRECATED) Return data corresponding to axis labels matching criteria.
+set_axis(labels[, axis, inplace])|Assign desired index to given axis.
+take(indices[, axis, convert, is_copy])|Return the elements in the given positional indices along an axis.
+tail([n])|Return the last n rows.
+truncate([before, after, axis, copy])|Truncate a Series or DataFrame before and after some index value.
+where(cond[, other, inplace, axis, …])|Replace values where the condition is False.
+mask(cond[, other, inplace, axis, …])|Replace values where the condition is True.
+add_prefix(prefix)|Prefix labels with string prefix.
+add_suffix(suffix)|Suffix labels with string suffix.
+filter([items, like, regex, axis])|Subset rows or columns of dataframe according to labels in the specified index.
+isna()|Detect missing values.
+notna()|Detect existing (non-missing) values.
+dropna([axis, inplace])|Return a new Series with missing values removed.
+fillna([value, method, axis, …])|Fill NA/NaN values using the specified method.
+interpolate([method, axis, limit, …])|Interpolate values according to different methods.
+argsort([axis, kind, order])|Overrides ndarray.argsort.
+argmin([axis, skipna])|(DEPRECATED) Return the row label of the minimum value.
+argmax([axis, skipna])|(DEPRECATED) Return the row label of the maximum value.
+reorder_levels(order)|Rearrange index levels using input order.
+sort_values([axis, ascending, …])|Sort by the values.
+sort_index([axis, level, ascending, …])|Sort Series by index labels.
+swaplevel([i, j, copy])|Swap levels i and j in a MultiIndex.
+unstack([level, fill_value])|Unstack, a.k.a.
+searchsorted(value[, side, sorter])|Find indices where elements should be inserted to maintain order.
+ravel([order])|Return the flattened underlying data as an ndarray.
+repeat(repeats[, axis])|Repeat elements of a Series.
+squeeze([axis])|Squeeze 1 dimensional axis objects into scalars.
+view([dtype])|Create a new view of the Series.
+append(to_append[, ignore_index, …])|Concatenate two or more Series.
+replace([to_replace, value, inplace, …])|Replace values given in to_replace with value.
+update(other)|Modify Series in place using non-NA values from passed Series.
+asfreq(freq[, method, how, …])|Convert TimeSeries to specified frequency.
+asof(where[, subset])|Return the last row(s) without any NaNs before where.
+shift([periods, freq, axis, fill_value])|Shift index by desired number of periods with an optional time freq.
+first_valid_index()|Return index for first non-NA/null value.
+last_valid_index()|Return index for last non-NA/null value.
+resample(rule[, how, axis, …])|Resample time-series data.
+tz_convert(tz[, axis, level, copy])|Convert tz-aware axis to target time zone.
+tz_localize(tz[, axis, level, copy, …])|Localize tz-naive index of a Series or DataFrame to target time zone.
+at_time(time[, asof, axis])|Select values at particular time of day (e.g.
+between_time(start_time, end_time[, …])|Select values between particular times of the day (e.g., 9:00-9:30 AM).
+tshift([periods, freq, axis])|Shift the time index, using the index’s frequency if available.
+slice_shift([periods, axis])|Equivalent to shift without copying data.
+date|Returns numpy array of python datetime.date objects (namely, the date part of Timestamps without timezone information).
+time|Returns numpy array of datetime.time.
+timetz|Returns numpy array of datetime.time also containing timezone information.
+year|The year of the datetime.
+month|The month as January=1, December=12.
+day|The days of the datetime.
+hour|The hours of the datetime.
+minute|The minutes of the datetime.
+second|The seconds of the datetime.
+microsecond|The microseconds of the datetime.
+nanosecond|The nanoseconds of the datetime.
+week|The week ordinal of the year.
+weekofyear|The week ordinal of the year.
+dayofweek|The day of the week with Monday=0, Sunday=6.
+weekday|The day of the week with Monday=0, Sunday=6.
+dayofyear|The ordinal day of the year.
+quarter|The quarter of the date.
+is_month_start|Indicates whether the date is the first day of the month.
+is_month_end|Indicates whether the date is the last day of the month.
+is_quarter_start|Indicator for whether the date is the first day of a quarter.
+is_quarter_end|Indicator for whether the date is the last day of a quarter.
+is_year_start|Indicate whether the date is the first day of a year.
+is_year_end|Indicate whether the date is the last day of the year.
+is_leap_year|Boolean indicator if the date belongs to a leap year.
+daysinmonth|The number of days in the month.
+days_in_month|The number of days in the month.
+tz|Return timezone, if any.
+freq|
+to_period(*args, **kwargs)|Cast to PeriodArray/Index at a particular frequency.
+to_pydatetime()|Return the data as an array of native Python datetime objects.
+tz_localize(*args, **kwargs)|Localize tz-naive Datetime Array/Index to tz-aware Datetime Array/Index.
+tz_convert(*args, **kwargs)|Convert tz-aware Datetime Array/Index from one time zone to another.
+normalize(*args, **kwargs)|Convert times to midnight.
+strftime(*args, **kwargs)|Convert to Index using specified date_format.
+round(*args, **kwargs)|Perform round operation on the data to the specified freq.
+floor(*args, **kwargs)|Perform floor operation on the data to the specified freq.
+ceil(*args, **kwargs)|Perform ceil operation on the data to the specified freq.
+month_name(*args, **kwargs)|Return the month names of the DateTimeIndex with specified locale.
+day_name(*args, **kwargs)|Return the day names of the DateTimeIndex with specified locale.
+qyear|
+start_time|
+end_time|
+days|Number of days for each element.
+seconds|Number of seconds (>= 0 and less than 1 day) for each element.
+microseconds|Number of microseconds (>= 0 and less than 1 second) for each element.
+nanoseconds|Number of nanoseconds (>= 0 and less than 1 microsecond) for each element.
+components|Return a Dataframe of the components of the Timedeltas.
+to_pytimedelta()|Return an array of native datetime.timedelta objects.
+total_seconds(*args, **kwargs)|Return total duration of each element expressed in seconds.
+capitalize()|Convert strings in the Series/Index to be capitalized.
+cat([others, sep, na_rep, join])|Concatenate strings in the Series/Index with given separator.
+center(width[, fillchar])|Filling left and right side of strings in the Series/Index with an additional character.
+contains(pat[, case, flags, na, …])|Test if pattern or regex is contained within a string of a Series or Index.
+count(pat[, flags])|Count occurrences of pattern in each string of the Series/Index.
+decode(encoding[, errors])|Decode character string in the Series/Index using indicated encoding.
+encode(encoding[, errors])|Encode character string in the Series/Index using indicated encoding.
+endswith(pat[, na])|Test if the end of each string element matches a pattern.
+extract(pat[, flags, expand])|Extract capture groups in the regex pat as columns in a DataFrame.
+extractall(pat[, flags])|For each subject string in the Series, extract groups from all matches of regular expression pat.
+find(sub[, start, end])|Return lowest indexes in each strings in the Series/Index where the substring is fully contained between [start:end].
+findall(pat[, flags])|Find all occurrences of pattern or regular expression in the Series/Index.
+get(i)|Extract element from each component at specified position.
+index(sub[, start, end])|Return lowest indexes in each strings where the substring is fully contained between [start:end].
+join(sep)|Join lists contained as elements in the Series/Index with passed delimiter.
+len()|Computes the length of each element in the Series/Index.
+ljust(width[, fillchar])|Filling right side of strings in the Series/Index with an additional character.
+lower()|Convert strings in the Series/Index to lowercase.
+lstrip([to_strip])|Remove leading and trailing characters.
+match(pat[, case, flags, na])|Determine if each string matches a regular expression.
+normalize(form)|Return the Unicode normal form for the strings in the Series/Index.
+pad(width[, side, fillchar])|Pad strings in the Series/Index up to width.
+partition([sep, expand])|Split the string at the first occurrence of sep.
+repeat(repeats)|Duplicate each string in the Series or Index.
+replace(pat, repl[, n, case, …])|Replace occurrences of pattern/regex in the Series/Index with some other string.
+rfind(sub[, start, end])|Return highest indexes in each strings in the Series/Index where the substring is fully contained between [start:end].
+rindex(sub[, start, end])|Return highest indexes in each strings where the substring is fully contained between [start:end].
+rjust(width[, fillchar])|Filling left side of strings in the Series/Index with an additional character.
+rpartition([sep, expand])|Split the string at the last occurrence of sep.
+rstrip([to_strip])|Remove leading and trailing characters.
+slice([start, stop, step])|Slice substrings from each element in the Series or Index.
+slice_replace([start, stop, repl])|Replace a positional slice of a string with another value.
+split([pat, n, expand])|Split strings around given separator/delimiter.
+rsplit([pat, n, expand])|Split strings around given separator/delimiter.
+startswith(pat[, na])|Test if the start of each string element matches a pattern.
+strip([to_strip])|Remove leading and trailing characters.
+swapcase()|Convert strings in the Series/Index to be swapcased.
+title()|Convert strings in the Series/Index to titlecase.
+translate(table[, deletechars])|Map all characters in the string through the given mapping table.
+upper()|Convert strings in the Series/Index to uppercase.
+wrap(width, **kwargs)|Wrap long strings in the Series/Index to be formatted in paragraphs with length less than a given width.
+zfill(width)|Pad strings in the Series/Index by prepending ‘0’ characters.
+isalnum()|Check whether all characters in each string are alphanumeric.
+isalpha()|Check whether all characters in each string are alphabetic.
+isdigit()|Check whether all characters in each string are digits.
+isspace()|Check whether all characters in each string are whitespace.
+islower()|Check whether all characters in each string are lowercase.
+isupper()|Check whether all characters in each string are uppercase.
+istitle()|Check whether all characters in each string are titlecase.
+isnumeric()|Check whether all characters in each string are numeric.
+isdecimal()|Check whether all characters in each string are decimal.
+get_dummies([sep])|Split each string in the Series by sep and return a frame of dummy/indicator variables.
+categories|The categories of this categorical.
+ordered|Whether the categories have an ordered relationship.
+codes|Return Series of codes as well as the index.
+rename_categories(*args, **kwargs)|Renames categories.
+reorder_categories(*args, **kwargs)|Reorders categories as specified in new_categories.
+add_categories(*args, **kwargs)|Add new categories.
+remove_categories(*args, **kwargs)|Removes the specified categories.
+remove_unused_categories(*args, …)|Removes categories which are not used.
+set_categories(*args, **kwargs)|Sets the categories to the specified new_categories.
+as_ordered(*args, **kwargs)|Set the Categorical to be ordered.
+as_unordered(*args, **kwargs)|Set the Categorical to be unordered.
+npoints|The number of non- fill_value points.
+density|The percent of non- fill_value points, as decimal.
+fill_value|Elements in data that are fill_value are not stored.
+sp_values|An ndarray containing the non- fill_value values.
+from_coo(A[, dense_index])|Create a SparseSeries from a scipy.sparse.coo_matrix.
+to_coo([row_levels, …])|Create a scipy.sparse.coo_matrix from a SparseSeries with MultiIndex.
+])|Series plotting accessor and method
+area(**kwds)|Area plot.
+bar(**kwds)|Vertical bar plot.
+barh(**kwds)|Horizontal bar plot.
+box(**kwds)|Boxplot.
+density([bw_method, ind])|Generate Kernel Density Estimate plot using Gaussian kernels.
+hist([bins])|Histogram.
+kde([bw_method, ind])|Generate Kernel Density Estimate plot using Gaussian kernels.
+line(**kwds)|Line plot.
+pie(**kwds)|Pie chart.
+hist([by, ax, grid, xlabelsize, …])|Draw histogram of the input series using matplotlib.
+to_pickle(path[, compression, protocol])|Pickle (serialize) object to file.
+to_csv(*args, **kwargs)|Write object to a comma-separated values (csv) file.
+to_dict([into])|Convert Series to {label -> value} dict or dict-like object.
+to_excel(excel_writer[, sheet_name, …])|Write object to an Excel sheet.
+to_frame([name])|Convert Series to DataFrame.
+to_xarray()|Return an xarray object from the pandas object.
+to_hdf(path_or_buf, key, **kwargs)|Write the contained data to an HDF5 file using HDFStore.
+to_sql(name, con[, schema, …])|Write records stored in a DataFrame to a SQL database.
+to_msgpack([path_or_buf, encoding])|Serialize object to input file path using msgpack format.
+to_json([path_or_buf, orient, …])|Convert the object to a JSON string.
+to_sparse([kind, fill_value])|Convert Series to SparseSeries.
+to_dense()|Return dense representation of NDFrame (as opposed to sparse).
+to_string([buf, na_rep, …])|Render a string representation of the Series.
+to_clipboard([excel, sep])|Copy object to the system clipboard.
+to_latex([buf, columns, col_space, …])|Render an object to a LaTeX tabular environment table.
+to_coo([row_levels, …])|Create a scipy.sparse.coo_matrix from a SparseSeries with MultiIndex.
+from_coo(A[, dense_index])|Create a SparseSeries from a scipy.sparse.coo_matrix.
